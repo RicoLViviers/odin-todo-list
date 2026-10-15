@@ -1,4 +1,145 @@
-* 
-{
-    background-color: black;
+:root {
+    --color-bg: #0B1120;
+    --color-bg-secondary: #111B2E;
+    --color-bg-elevated: #19263B;
+
+    --color-primary: #3B82F6;
+    --color-primary-hover: #60A5FA;
+    --color-primary-muted: #1E3A5F;
+
+    --color-text: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+
+    --color-border: #263449;
+    --color-danger: #EF4444;
+    --color-danger-hover: #DC2626;
+
+    --border-radius: 10px;
+    --transition: 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 60px 8%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.seperator {
+    width: 48px;
+    height: 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+th {
+    padding: 14px 20px;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+td:first-child {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+table tr {
+    transition: background-color var(--transition);
+}
+
+table tr:hover td {
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+button {
+    padding: 8px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-bg-elevated);
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+button:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-muted);
+    color: var(--color-primary-hover);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#state {
+    border-color: rgba(59, 130, 246, 0.35);
+    background-color: rgba(59, 130, 246, 0.12);
+    color: var(--color-primary-hover);
+}
+
+#edit {
+    border-color: rgba(148, 163, 184, 0.25);
+    background-color: transparent;
+    color: var(--color-text-secondary);
+}
+
+#edit:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-muted);
+    color: var(--color-text);
+}
+
+#delete {
+    border-color: rgba(239, 68, 68, 0.25);
+    background-color: rgba(239, 68, 68, 0.08);
+    color: #F87171;
+}
+
+#delete:hover {
+    border-color: var(--color-danger);
+    background-color: var(--color-danger-hover);
+    color: white;
 }
