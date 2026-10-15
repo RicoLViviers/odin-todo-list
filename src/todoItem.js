@@ -1,10 +1,10 @@
-export default function createTodoItem(title, description, dueDate, priority, completed = false) {
+export default function createTodoItem(title, description, dueDate, priority, state = false) {
     return {
         title,
         description,
         dueDate,
         priority,
-        completed,
+        state,
 
         isOverdue() {
             return new Date(dueDate) < new Date();
@@ -16,7 +16,7 @@ export default function createTodoItem(title, description, dueDate, priority, co
             Object.assign(this, fields);
         },
         isCompleted() {
-            return this.completed;
+            return this.state;
         }
     };
 }
