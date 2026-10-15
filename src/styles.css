@@ -143,3 +143,9 @@ button:active {
     background-color: var(--color-danger-hover);
     color: white;
 }
+
+#content-header
+{
+    display: flex;
+    justify-content: space-between;
+}
